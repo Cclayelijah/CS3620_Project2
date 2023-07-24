@@ -28,9 +28,7 @@ def story(request, story_id):
     if (request.method == 'POST'):
         # 1. get words and story text
         story_text = convert_text(item.story_text)
-        # form = StoryForm(3)
-        print(request.POST)
-        story_words = []
+        story_words = [request.POST.get(f'word{i}', '') for i in range(1, len(word_list) + 1)]
         # 2. insert record into Processed table
         record = Processed(story_text=story_text, story_words=story_words, story_id=story_id)
         record.save()

@@ -8,8 +8,8 @@
             {% csrf_token %}
             {% for word in story_words %}
             <div class="form-floating mb-3">
-                <input id="{{ forloop.counter }}" class="form-control" type="text" placeholder="{{ word }}" />
-                <label for="{{ forloop.counter }}">{{ word }}</label>
+                <input id="word{{ forloop.counter }}" name="word{{ forloop.counter }}" class="form-control" type="text" placeholder="{{ word }}" />
+                <label for="word{{ forloop.counter }}">{{ word }}</label>
             </div>
             {% endfor %}
             <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button>
