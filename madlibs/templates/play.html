@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container text-center pb-5">
+        <h1>{{ story.story_title }}</h1>
+        <img src="{{ story.story_image }}" alt="Story Image" width="300">
+        <form class="my-5" method="POST">
+            {% csrf_token %}
+            {% for word in story_words %}
+            <div class="form-floating mb-3">
+                <input id="{{ forloop.counter }}" class="form-control" type="text" placeholder="{{ word }}" />
+                <label for="{{ forloop.counter }}">{{ word }}</label>
+            </div>
+            {% endfor %}
+            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

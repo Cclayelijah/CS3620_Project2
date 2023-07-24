@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <!-- Masthead-->
+        <header class="py-5 bg-primary text-white text-center">
+            <div class="container my-5 align-items-center flex-column">
+                <img class="masthead-avatar mb-5" width="200px" src="{% static "madlibs/img/avataaars.svg" %}" alt="..." />
+                <h1 class="masthead-heading text-uppercase my-0">World's Best Mad Libs</h1>
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <h3 class="font-weight-light">So much Fun - Laugh a Lot - Party Time</h3>
+            </div>
+        </header>
+    <div class="container my-5 text-center p-4">
+    <h1>What are you waiting for?</h1>
+        <a href="madlibs/">
+            <button class="btn btn-xl btn-primary mt-4">Get Started</button>
+        </a>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container">
+    <h1>Choose a Story</h1>
+    <div class="d-flex flex-wrap align-items-center mb-5 gap-3">
+        {% for story in story_list %}
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{{ story.story_image }}" alt="Card Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ story.story_title }}</h5>
+            <a href="{% url 'madlibs:play' story.id %}" class="btn btn-primary btn-lg">Play</a>
+          </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

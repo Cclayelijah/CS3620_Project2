@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container my-5">
+        <h1>{{ record_story.story_title }}</h1>
+        <div style="min-height: 150px;margin-bottom:16px;">
+            <img src="{{ record_story.story_image }}" alt="Story Image" height="150" style="float:left; margin-right: 16px; margin-bottom: 16px;">
+            <p style="line-height:2; font-size: 18px;">
+                {{ story_text }}
+            </p>
+        </div>
+        <div>
+
+        </div>
+    </div>
+{% endblock %}
